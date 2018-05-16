@@ -1,0 +1,23 @@
+{
+  "name": "whools",
+  "version": "1.0.0",
+  "description": "jQuery module production [no webpack, no es6]",
+  "main": "index.js",
+  "scripts": {
+    "server": "http-server ./src -p 4000 -o",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiejunping/whools.git"
+  },
+  "author": "Cobbler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiejunping/whools/issues"
+  },
+  "homepage": "https://github.com/xiejunping/whools#readme",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
