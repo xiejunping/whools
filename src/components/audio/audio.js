@@ -17,30 +17,41 @@ define(function(require) {
         ],
         data: function () {
             return {
-                statu: 'playing',
+                statu: '',
                 player: null,
             };
         },
         mounted: function() {
             this.player = this.$refs.audio;
-
-            this.player.addEventListener('playing', function() {
-
-            });
-            this.player.addEventListener('pause', function () {
-
-            });
-            this.player.addEventListener('ended', function () {
-
-            });
-            // 当播放位置改变时
-            this.player.addEventListener('timeupdate', function () {
-                console.log(this.player.currentTime);
-            });
+            this.init();
         },
         methods: {
             init: function () {
-                this.player.currentTime = this.start;
+                var _this = this;
+                //
+                this.player.addEventListener('playing', function() {
+                    _this.statu = 'playing';
+                    _this.$emit('change', _this.statu);
+                });
+                this.player.addEventListener('pause', function () {
+                    _this.statu = 'pause';
+                    _this.$emit('change', _this.statu);
+                });
+                this.player.addEventListener('ended', function () {
+                    _this.statu = 'ended';
+                    _this.$emit('change', _this.statu);
+                });
+                // 当播放位置改变时
+                this.player.addEventListener('timeupdate', function () {
+                    _this.stop();
+                });
+            },
+            stop: function() {
+                this.player.currentTime > parseFloat(this.end) && this.player.pause();
+            },
+            play: function() {
+                this.player.currentTime = parseFloat(this.start);
+                this.player.play();
             }
         }
     });

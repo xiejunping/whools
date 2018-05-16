@@ -34,7 +34,6 @@ require.config({
     var paths = window.location.pathname.split('/');
     var entry = paths && paths.length && paths[paths.length - 2];
 
-    console.log(paths);
     require(['/modules/' + entry + '/app.js']);
 })(window);
 

@@ -132,6 +132,11 @@ require(['jquery', 'model', 'vue', 'utils', '../../components/index'], function(
 
                 };
             },
+            methods: {
+                getStatus: function(stat) {
+                    console.log(stat);
+                }
+            },
             components: {
                 'c-audio': Audio
             }

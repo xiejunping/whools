@@ -1,5 +1,5 @@
 <div class="c-audio">
-    <span class="c-circle" :class="{'c-circle-active': statu === 'playing'}">{{idx}}</span>
+    <span class="c-circle" :class="{'c-circle-active': statu === 'playing'}" @click="play">{{idx}}</span>
 
     <audio class="c-audio-hidden"
            :autoplay="autoplay"
