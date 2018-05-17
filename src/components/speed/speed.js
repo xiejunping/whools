@@ -2,7 +2,7 @@ define(function(require) {
     'use strict';
 
     var Vue = require('vue');
-    var speedTemplate = require('text!./speed.html');
+    var speedTemplate = require('text!./speed.tpl');
     var utils = require('utils');
 
     return Vue.component('c-speed', {

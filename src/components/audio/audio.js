@@ -2,7 +2,7 @@ define(function(require) {
     'use strict';
 
     var Vue = require('vue');
-    var audioTemplate = require('text!./audio.html');
+    var audioTemplate = require('text!./audio.tpl');
     // var utils = require('utils');
 
     return Vue.component('c-audio', {

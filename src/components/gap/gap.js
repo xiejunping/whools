@@ -2,7 +2,7 @@ define(function(require) {
     'use strict';
 
     var Vue = require('vue');
-    var gapTemplate = require('text!./gap.html');
+    var gapTemplate = require('text!./gap.tpl');
     var utils = require('utils');
 
     return Vue.component('c-gap', {

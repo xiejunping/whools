@@ -2,7 +2,7 @@ define(function(require) {
     'use strict';
 
     var Vue = require('vue');
-    var dropdownTemplate = require('text!./dropdown.html');
+    var dropdownTemplate = require('text!./dropdown.tpl');
     var utils = require('utils');
 
     return Vue.component('c-dropdown', {
