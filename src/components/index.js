@@ -3,11 +3,13 @@ define(function(require) {
     var gap = require('gap');
     var speed = require('speed');
     var audio = require('audio');
+    var audiogroup = require('audiogroup');
 
     return {
         dropdown: dropdown,
         gap: gap,
         speed: speed,
         audio: audio,
+        audiogroup: audiogroup,
     }
 });

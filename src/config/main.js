@@ -25,7 +25,7 @@ require.config({
         'gap': '/components/gap/gap',
         'speed': '/components/speed/speed',
         'audio': '/components/audio/audio',
-        'audiogroup': '/audiogroup/audiogroup/audiogroup',
+        'audiogroup': '/components/audiogroup/audiogroup',
     },
     urlArgs: 'v=' + (new Date()).getTime()
 });

@@ -116,7 +116,13 @@ html, body {
 }
 
 .c-section {
+    display: inline-block;
     font-size: 0;
+}
+
+.c-audio {
+    font-size: 0;
+    display: inline-block;
 }
 
 .c-circle {
@@ -139,6 +145,7 @@ html, body {
 }
 
 .c-control {
+    display: inline-block;
     height: 30px;
     border: solid 1px #44BC24;
     background-color: #13A110;

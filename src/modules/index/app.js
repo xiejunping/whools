@@ -4,6 +4,7 @@ require(['jquery', 'model', 'vue', 'utils', '../../components/index'], function 
     var Gap = Components.gap;
     var Speed = Components.speed;
     var Audio = Components.audio;
+    var AudioGroup = Components.audiogroup;
 
     $(document).ready(function () {
         var userId = sessionStorage.getItem("userid");
@@ -55,7 +56,33 @@ require(['jquery', 'model', 'vue', 'utils', '../../components/index'], function 
                         key: 1.5,
                         value: '快速'
                     }],
-                    speedValue: 1
+                    speedValue: 1,
+                    section: [{
+                        id: '1',
+                        start: '9',
+                        end: '12.9',
+                        mp3: 'http://res.dinoenglish.com/userfiles/listenSave/7721f8d105354655a75e09fd4eacd020/default.mp3'
+                    }, {
+                        id: '2',
+                        start: '13.4',
+                        end: '19.9',
+                        mp3: 'http://res.dinoenglish.com/userfiles/listenSave/7721f8d105354655a75e09fd4eacd020/default.mp3'
+                    }, {
+                        id: '3',
+                        start: '20.5',
+                        end: '25.9',
+                        mp3: 'http://res.dinoenglish.com/userfiles/listenSave/7721f8d105354655a75e09fd4eacd020/default.mp3'
+                    }, {
+                        id: '4',
+                        start: '27',
+                        end: '32',
+                        mp3: 'http://res.dinoenglish.com/userfiles/listenSave/7721f8d105354655a75e09fd4eacd020/default.mp3'
+                    }, {
+                        id: '5',
+                        start: '39',
+                        end: '68',
+                        mp3: 'http://res.dinoenglish.com/userfiles/listenSave/7721f8d105354655a75e09fd4eacd020/default.mp3'
+                    }]
                 };
             },
             mounted: function () {
@@ -125,7 +152,8 @@ require(['jquery', 'model', 'vue', 'utils', '../../components/index'], function 
             components: {
                 'c-dropdown': Dropdown,
                 'c-gap': Gap,
-                'c-speed': Speed
+                'c-speed': Speed,
+                'c-audio-group': AudioGroup,
             }
         });
 

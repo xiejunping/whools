@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-comp|ie-stand">
     <title>Title</title>
     <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="/static/css/base.css?v=1.0.0"/>
-    <link rel="stylesheet" type="text/css" href="/static/css/index.css?v=1.0.0"/>
-    <link rel="stylesheet" type="text/css" href="/static/font/iconfont.css?v=1.0.0"/>
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css?v=1.0.0" />
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css?v=1.0.0" />
+    <link rel="stylesheet" type="text/css" href="/static/font/iconfont.css?v=1.0.0" />
     <!--[if lt IE 9]>
     <meta http-equiv="refresh" content="0;ie.html" />
     <![endif]-->
     <!-- <script type="text/javascript">if (!sessionStorage.getItem('userid')) window.location.href = "../../login.html"</script> -->
 </head>
+
 <body>
     <div id="view">
         <c-audio idx="1" :playback="rate" @change="getStatus" start="9" end="32.9" src="http://res.dinoenglish.com/userfiles/listenSave/7721f8d105354655a75e09fd4eacd020/default.mp3"></c-audio>
@@ -27,7 +29,9 @@
 
             <div class="c-back" @click="back">
                 <a>返回</a>
-                <span><i class="iconfont icon-enter"></i></span>
+                <span>
+                    <i class="iconfont icon-enter"></i>
+                </span>
             </div>
 
             <div class="c-nav-logo">
@@ -35,23 +39,15 @@
             </div>
 
             <div class="c-group-btn">
-                <c-dropdown :menu="gradeList"
-                            v-model="gradeValue"
-                            @change="filterGrade">
+                <c-dropdown :menu="gradeList" v-model="gradeValue" @change="filterGrade">
                 </c-dropdown>
 
-                <c-dropdown width="300"
-                            align="left"
-                            :menu="unitList"
-                            v-model="unitValue"
-                            @change="filterUnit">
+                <c-dropdown width="300" align="left" :menu="unitList" v-model="unitValue" @change="filterUnit">
                 </c-dropdown>
 
 
 
-                <div class="c-section">
-
-
+                <!-- <div class="c-section">
                     <span class="c-circle">A</span>
                     <span class="c-circle">B</span>
                     <span class="c-circle">C</span>
@@ -65,24 +61,9 @@
                     <div class="c-follow">
                         全文跟读
                     </div>
-                </div>
+                </div> -->
 
-                <!--<div class="c-control">-->
-                    <!--<div class="c-play">-->
-                        <!--<i class="iconfont icon-"></i>-->
-                        <!--播放-->
-                    <!--</div>-->
-                    <!--<div class="c-compact">-->
-                        <!--<i class="iconfont icon-"></i>-->
-                        <!--连播-->
-                    <!--</div>-->
-                    <!--<div class="c-stop">-->
-                        <!--<i class="iconfont icon-"></i>-->
-                        <!--停止-->
-                    <!--</div>-->
-                <!--</div>-->
-
-
+                <c-audio-group :items="section" current="1" :gap="gapValue" :playback="speedValue"></c-audio-group>
 
                 <c-speed :speeds="speeds" v-model="speedValue"></c-speed>
 
@@ -103,7 +84,7 @@
                         <i class="iconfont icon-suoxiao"></i>
                     </div>
                 </div>
-                
+
                 <div class="c-translate g-group-block">
                     翻译
                     <i class="iconfont icon-checkcircle"></i>
@@ -116,4 +97,5 @@
     </div>
 </body>
 <script type="text/javascript" src="/lib/require/require.js" data-main="/config/main.js" defer async="true"></script>
+
 </html>

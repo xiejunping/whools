@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="c-audio-group">
+    <div class="c-section">
+        <c-audio v-for="t in items" :idx="t.id" :playback="playback" @change="getStatus" :start="t.start" :end="t.end" :src="t.mp3"></c-audio>
+    </div>
+    <div class="c-control">
+        <div class="c-play">
+            <i class="iconfont icon-"></i>
+            播放
+        </div>
+        <div class="c-compact">
+            <i class="iconfont icon-"></i>
+            连播
+        </div>
+        <div class="c-stop">
+            <i class="iconfont icon-"></i>
+            停止
+        </div>
+    </div>
+</div>
