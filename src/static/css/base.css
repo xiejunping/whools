@@ -191,13 +191,6 @@ html, body {
     color: #13A110;
     cursor: pointer;
 }
-.c-back span{
-    display: inline-block;
-    -moz-transform: scaleY(-1);
-    -webkit-transform: scaleY(-1);
-    -o-transform: scaleY(-1);
-    transform: scaleY(-1);
-}
 
 .c-more {
     width: 40px;
