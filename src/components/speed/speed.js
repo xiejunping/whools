@@ -25,7 +25,7 @@ define(function(require) {
                 return str;
             },
             iconStyle: function () {
-                return this.showSpeed ? 'icon-caretdown' : 'icon-caretup'
+                return this.showSpeed ? 'icon-triangledownfill' : 'icon-triangleupfill';
             }
         },
         methods: {

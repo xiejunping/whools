@@ -24,7 +24,7 @@ define(function(require) {
                 return str;
             },
             iconStyle: function () {
-                return this.showGap ? 'icon-caretdown' : 'icon-caretup';
+                return this.showGap ? 'icon-triangledownfill' : 'icon-triangleupfill';
             }
         },
         methods: {

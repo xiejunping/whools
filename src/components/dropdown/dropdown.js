@@ -35,7 +35,7 @@ define(function(require) {
                 return str;
             },
             iconStyle: function () {
-                return this.menuShow ? 'icon-downcircle' : 'icon-upcircle';
+                return this.menuShow ? 'icon-angle-down-circle' : 'icon-angle-up-circle';
             }
         },
         methods: {
