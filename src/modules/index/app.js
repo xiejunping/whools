@@ -1,11 +1,11 @@
-require(['jquery', 'model', 'vue', 'utils', '../../components/index'], function($, model, Vue, utils, Components) {
+require(['jquery', 'model', 'vue', 'utils', '../../components/index'], function ($, model, Vue, utils, Components) {
 
     var Dropdown = Components.dropdown;
     var Gap = Components.gap;
     var Speed = Components.speed;
     var Audio = Components.audio;
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         var userId = sessionStorage.getItem("userid");
         var unitId = null;
 
@@ -43,33 +43,38 @@ require(['jquery', 'model', 'vue', 'utils', '../../components/index'], function(
                     }],
                     gapValue: 1,
                     speeds: [{
-                        key: 1,
+                        key: 0.5,
                         value: '很慢'
                     }, {
-                        key: 2,
+                        key: 0.7,
                         value: '慢速'
                     }, {
-                        key: 3,
+                        key: 1,
                         value: '正常'
                     }, {
-                        key: 4,
+                        key: 1.5,
                         value: '快速'
                     }],
-                    speedValue: 3
+                    speedValue: 1
                 };
             },
-            mounted: function() {
+            mounted: function () {
                 this.init();
             },
+            watch: {
+                speedValue: function (newVal) {
+                    view.rate = newVal;
+                }
+            },
             methods: {
-                init: function() {
+                init: function () {
                     this.getGradeList();
                 },
                 getGradeList: function () {
                     var _this = this;
                     model.getGradeList(function (data) {
                         if (data.attributes) {
-                            _this.gradeList = data.attributes.map(function(item) {
+                            _this.gradeList = data.attributes.map(function (item) {
                                 return {
                                     key: item.bookId,
                                     value: item.bookName
@@ -79,13 +84,13 @@ require(['jquery', 'model', 'vue', 'utils', '../../components/index'], function(
                     });
                 },
                 getRectInfo: function () {
-                    model.getRectInfo(userId, 'b0e5213a76a34058afa50c65363efxsb', function(data) {
+                    model.getRectInfo(userId, 'b0e5213a76a34058afa50c65363efxsb', function (data) {
                         console.log(data);
                     });
                 },
                 getBookListen: function (bookId) {
                     var _this = this;
-                    model.getBookListen(bookId, function(data) {
+                    model.getBookListen(bookId, function (data) {
                         console.log(data);
 
                         if (data.attributes) {
@@ -129,11 +134,11 @@ require(['jquery', 'model', 'vue', 'utils', '../../components/index'], function(
             el: '#view',
             data: function () {
                 return {
-
+                    rate: 1
                 };
             },
             methods: {
-                getStatus: function(stat) {
+                getStatus: function (stat) {
                     console.log(stat);
                 }
             },
