@@ -77,11 +77,6 @@ require(['jquery', 'model', 'vue', 'utils', '../../components/index'], function 
                         start: '27',
                         end: '32',
                         mp3: 'http://res.dinoenglish.com/userfiles/listenSave/7721f8d105354655a75e09fd4eacd020/default.mp3'
-                    }, {
-                        id: '5',
-                        start: '39',
-                        end: '68',
-                        mp3: 'http://res.dinoenglish.com/userfiles/listenSave/7721f8d105354655a75e09fd4eacd020/default.mp3'
                     }]
                 };
             },
