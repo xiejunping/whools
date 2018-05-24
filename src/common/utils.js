@@ -28,5 +28,10 @@ define({
             index = tem.indexOf(id);
         }
         return index;
+    },
+    randomArr: function(arr) {
+        return arr.sort(function() {
+            return (0.5 - Math.random());
+        });
     }
 });
